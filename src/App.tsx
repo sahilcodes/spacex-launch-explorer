@@ -1,12 +1,16 @@
 // import viteLogo from '/vite.svg'
-import Home from "./pages/Home";
+import React from "react";
+import AppRoutes from "./routes";
+import ThemeToggle from "./components/ThemeToggle";
 
-function App() {
+
+const App: React.FC = () => {
   return (
     <>
-      <Home />
+      <ThemeToggle />
+      <AppRoutes />
     </>
-  );
+  )
 }
 
 export default App;

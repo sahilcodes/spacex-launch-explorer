@@ -1,15 +1,45 @@
+*,
+*::after,
+*::before {
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a,
+input,
+button,
+span {
+  display: inline-block;
+}
+
 body {
   font-family: "Inter", Arial, sans-serif;
-  background: var(--bg);
+  background-color: var(--bg);
   color: var(--text);
+  transition: background-color 0.3s ease;
+
+  &.dark {
+    --bg: #3a3a3a;
+    --text: #fff;
+
+    a {
+      color: #fff;
+    }
+  }
+
+  &.white {
+    --bg: #fff;
+    --text: #000;
+  }
 }
 
-.dark {
-  --bg: #121212;
-  --text: #ffffff;
-}
-
-.light {
-  --bg: #ffffff;
-  --text: #000000;
+.theme-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 8px 16px;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 4px;
 }

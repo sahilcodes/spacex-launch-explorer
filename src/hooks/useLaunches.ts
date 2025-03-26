@@ -8,6 +8,7 @@ export interface Launch {
   name: string;
   date_utc: string;
   success: boolean | null;
+  details: string | null;
   links: {
     patch: { small: string | null };
     webcast: string | null;
