@@ -53,7 +53,6 @@ yarn dev
 
 ## 📁 Folder Structure
 
-\`\`\`
 spacex-launch-explorer/
 │── src/
 │   ├── assets/                 # Static assets (images, styles)
@@ -74,7 +73,6 @@ spacex-launch-explorer/
 │── tsconfig.json               # TypeScript config
 │── vite.config.ts              # Vite config
 │── README.md                   # Project documentation
-\`\`\`
 
 ---
 
@@ -145,7 +143,7 @@ This project is **open-source**.
 ---
 
 ## 📬 Contact
-🔗 **GitHub**: [@yourusername](https://github.com/sahilcodes)  
+🔗 **GitHub**: [@sahilcodes](https://github.com/sahilcodes)  
 📧 **Email**: sahilcancode@gmail.com  
 
 ---
