@@ -5,9 +5,18 @@ const ThemeToggle: React.FC = () => {
   const { darkMode, toggleTheme } = useTheme();
 
   return (
-    <button className="theme-toggler" onClick={toggleTheme}>
-      {darkMode ? "🌙 Dark Mode" : "☀️ Light Mode"}
-    </button>
+    <div className="theme-toggle">
+      <input
+        type="checkbox"
+        id="theme-switch"
+        checked={darkMode === true}
+        onChange={toggleTheme}
+      />
+      <label htmlFor="theme-switch" className="theme-toggle__slider">
+        <span className="theme-toggle__icon sun">☀️</span>
+        <span className="theme-toggle__icon moon">🌙</span>
+      </label>
+    </div>
   );
 };
 

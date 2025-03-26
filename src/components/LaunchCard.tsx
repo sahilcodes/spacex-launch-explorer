@@ -9,16 +9,24 @@ interface Props {
 const LaunchCard: React.FC<Props> = ({ launch }) => {
   return (
     <div className="launch-card">
-      <img
-        src={launch.links.patch.small || "fallback_placeholder.png"}
-        alt="{launch.name}"
-      />
+      {launch.links.patch.small && (
+        <img
+          src={launch.links.patch.small}
+          alt={launch.name}
+          className="launch-card__image"
+        />
+      )}
+      <div className="launch-card__header">
+        <h3>{launch.name}</h3>
+        <p className="launch-card__date">
+          {new Date(launch.date_utc).toLocaleDateString()}
+        </p>
+      </div>
+      <div className="launch-card__status">
+        <p>Status: {launch.success ? "✅ Success" : "❌ Failure"}</p>
+      </div>
 
-      <h3>{launch.name}</h3>
-      <p>{new Date(launch.date_utc).toLocaleDateString()}</p>
-      <p>Status: {launch.success ? "Success" : "Oh ho! Failure :("}</p>
-
-      <Link to={`/launch/${launch.id}`}>Details</Link>
+      <Link className="launch-card__link" to={`/launch/${launch.id}`}>Details</Link>
     </div>
   );
 };
