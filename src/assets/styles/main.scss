@@ -1,13 +1,13 @@
 /* Base styles */
-@import "./base/reset";
+@use "./base/reset";
 
 /* Global styles */
-@import "../styles/base/global";
+@use "../styles/base/global";
 
 /* Component styles */
-@import "./components/launch-card";
-@import "./components/launch-details";
-@import "./components/theme-toggle";
+@use "./components/launch-card";
+@use "./components/launch-details";
+@use "./components/theme-toggle";
 
 /* Page styles */
-@import "./pages/home";
+@use "./pages/home";
