@@ -5,7 +5,7 @@ import LaunchCard from "../components/LaunchCard";
 const Home: React.FC = () => {
   const { launches, loading } = useLaunches();
   const [query, setQuery] = useState(""); // For search query
-  const [visibleCount, setVisibleCount] = useState(10); // Number of launches currently visible
+  const [visibleCount, setVisibleCount] = useState(20); // Number of launches currently visible
 
   if (loading) return <p>Loading launches...</p>;
 
@@ -16,7 +16,7 @@ const Home: React.FC = () => {
 
   // Handle "Load More" button click
   const handleLoadMore = () => {
-    setVisibleCount((prevCount) => prevCount + 10); // Increase visible count by 10
+    setVisibleCount((prevCount) => prevCount + 20); // Increase visible count by 10
   };
 
   return (
